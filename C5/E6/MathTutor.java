@@ -39,7 +39,7 @@ public class MathTutor
 				break;
 
 			case 3:
-				System.out.printf("What is %d / %d? ", num1, num2);
+				System.out.printf("What is %d / %d rounded to the nearest whole number? ", num1, num2);
 		        answer = input.nextInt();
 		        if (answer == num1/num2) {
 		            System.out.println("Correct!");
