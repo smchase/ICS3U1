@@ -20,11 +20,11 @@ public class Question
 
     public void showAnswer()
     {
-        System.out.printf("%*s\n", 10, "test");
+        System.out.printf("%-" + ((int)Math.log10(num1)+(int)Math.log10(num2)+5) + "sA: %d", "XXX", num1+num2);
     }
 
     public void showPrompt(int tries)
     {
-        System.out.printf("%-*s= ", (int)Math.log10(num1)+(int)Math.log10(num2)+6, tries==1?"X__":"XX_");
+        System.out.printf("%-" + ((int)Math.log10(num1)+(int)Math.log10(num2)+6) + "s= ", tries==1?"X__":"XX_");
     }
 }
