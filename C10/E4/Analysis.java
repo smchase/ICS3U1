@@ -48,6 +48,23 @@ public class Analysis
                 mode = i+1;
             }
         }
-        System.out.printf("Average: %.1f\nMax: %d\nRange: %d\nMode: %d\nHistogram:\n1-5: %d\n6-10: %d\n11-15: %d\n16-20: %d\n21-25: %d\n26-30: %d\n31-35: %d\n36-40: %d\n41-45: %d\n46-50: %d\n", (double)sum/(double)total, max, max-min, mode, arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9]);
+		int j = 0;
+		double med;
+		int[] nums = new int[total];
+		for (int i = 0; i < 50; i++) {
+			while (modes[i] > 0) {
+				nums[j] = i+1;
+				modes[i]--;
+				j++;
+			}
+		}
+		if (total%2 == 1) {
+			med = nums[total/2];
+		} else {
+			med = nums[total/2]+nums[total/2-1];
+			med /= 2;
+		}
+
+        System.out.printf("Average: %.1f\nMax: %d\nRange: %d\nMedian: %.1f\nMode: %d\nHistogram:\n1-5: %d\n6-10: %d\n11-15: %d\n16-20: %d\n21-25: %d\n26-30: %d\n31-35: %d\n36-40: %d\n41-45: %d\n46-50: %d\n", (double)sum/(double)total, max, max-min, med, mode, arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9]);
     }
 }
