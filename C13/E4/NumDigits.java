@@ -11,12 +11,10 @@ public class NumDigits
 
     public static int numDigits(int num, int dig)
     {
-        num /= 10;
-        dig++;
         if (num == 0) {
-            return dig;
+            return dig+1;
         } else {
-            return numDigits(num, dig);
+            return numDigits(num/10, dig+1);
         }
     }
 }
