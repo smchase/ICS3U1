@@ -55,6 +55,7 @@ public class Game
 			}
 			cC += Math.min(n1, n2);
 		}
+		cC -= pC;
 		for (int i = 0; i < pC; i++) {
 			System.out.print("+");
 		}
